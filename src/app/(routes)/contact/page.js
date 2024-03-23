@@ -3,7 +3,12 @@ import React from 'react'
 
 const page = () => {
   return (
+    <>
+    <div className='heading_title'>
+    <h1>Contact Us</h1>
+    </div>
     <Contact/>
+    </>
   )
 }
 

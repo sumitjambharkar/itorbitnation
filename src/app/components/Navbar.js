@@ -37,7 +37,7 @@ function Navbar() {
           </Link>
         </li>
         <li className="dropdown">
-          <Link className="dropbtn" onClick={toggleDrawer} href="/">
+          <Link className="dropbtn"  href="#">
             Location
           </Link>
           <div className="dropdown-content">
@@ -53,6 +53,17 @@ function Navbar() {
               </div>
             </div>
         </li>
+        <li className="dropdown">
+          <Link className="dropbtn"  href="#">
+            ForYou
+          </Link>
+          <div className="dropdown-content">
+              <div className="card">
+              <Link href="/resume">Free Resume</Link>
+              
+              </div>
+            </div>
+        </li>
         <li>
           <Link onClick={toggleDrawer} href="/blog">
             Blog
@@ -60,12 +71,12 @@ function Navbar() {
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/about">
-            About
+            About Us
           </Link>
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/contact">
-            Contact
+            Contact Us
           </Link>
         </li>
       </div>

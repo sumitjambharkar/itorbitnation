@@ -2,90 +2,28 @@ import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
+  let arr = [1,2,3,4,5,6,7,8]
   return (
     <section className="blog-section">
+      <div className='heading_title'>
+    <h1>Blogs</h1>
+    </div>
   <div className="container">
     <div className="blog-list">
-      <div className="blog-item">
+      {arr.map((doc)=>(
+        <div className="blog-item">
         <div className="blog-image">
-          <img src="https://dummyimage.com/720x400" alt="blog"/>
+          <img src="https://res.cloudinary.com/dsrc5z9na/image/upload/v1701769162/New_Project_57_sqba4z.png" alt="blog"/>
         </div>
         <div className="blog-content">
-          <h2 className="blog-category">CATEGORY</h2>
           <h1 className="blog-title">The Catalyzer</h1>
           <p className="blog-description">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
           <div className="blog-actions">
-            <Link href="#" className="learn-more">Learn More
-              <svg className="learn-more-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
-            </Link>
-            <span className="likes">1.2K</span>
-            <span className="comments">6</span>
+            <Link href="blog/126" className="learn-more">Read More</Link>
           </div>
         </div>
       </div>
-      <div className="blog-item">
-        <div className="blog-image">
-          <img src="https://dummyimage.com/720x400" alt="blog"/>
-        </div>
-        <div className="blog-content">
-          <h2 className="blog-category">CATEGORY</h2>
-          <h1 className="blog-title">The Catalyzer</h1>
-          <p className="blog-description">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          <div className="blog-actions">
-            <Link href="/blog/123" className="learn-more">Learn More
-              <svg className="learn-more-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
-            </Link>
-            <span className="likes">1.2K</span>
-            <span className="comments">6</span>
-          </div>
-        </div>
-      </div>
-      <div className="blog-item">
-        <div className="blog-image">
-          <img src="https://dummyimage.com/720x400" alt="blog"/>
-        </div>
-        <div className="blog-content">
-          <h2 className="blog-category">CATEGORY</h2>
-          <h1 className="blog-title">The Catalyzer</h1>
-          <p className="blog-description">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          <div className="blog-actions">
-            <Link href="#" className="learn-more">Learn More
-              <svg className="learn-more-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
-            </Link>
-            <span className="likes">1.2K</span>
-            <span className="comments">6</span>
-          </div>
-        </div>
-      </div>
-      <div className="blog-item">
-        <div className="blog-image">
-          <img src="https://dummyimage.com/720x400" alt="blog"/>
-        </div>
-        <div className="blog-content">
-          <h2 className="blog-category">CATEGORY</h2>
-          <h1 className="blog-title">The Catalyzer</h1>
-          <p className="blog-description">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-          <div className="blog-actions">
-            <Link href="/blog/123" className="learn-more">Learn More
-              <svg className="learn-more-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5l7 7-7 7"></path>
-              </svg>
-            </Link>
-            <span className="likes">1.2K</span>
-            <span className="comments">6</span>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
     
   </div>
