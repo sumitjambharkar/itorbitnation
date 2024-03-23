@@ -55,7 +55,7 @@ function Navbar() {
         </li>
         <li className="dropdown">
           <Link className="dropbtn"  href="#">
-            ForYou
+            Free Tech
           </Link>
           <div className="dropdown-content">
               <div className="card">
