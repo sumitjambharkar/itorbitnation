@@ -3,11 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  min-height: 100vh;
-  position: relative; 
-  margin: 0;
-  padding: 0;
+
+body {
+  height: auto;
+  width: auto;
 }
 
 .navbar {
@@ -87,16 +86,74 @@ body{
   
 }
 
+/* Dropdown Button */
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+  
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+
+  
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+/* margin-left: -580px  */
+  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #000;color: #ddd;} */
+
 /* Start Footer  */
 
 
 .footer {
   background-color: #000;
     color: #fff;
-   
     bottom: 0;
     padding-bottom: 24px;
     width: 100%;
+    z-index: 1;
+    width: 100%;
+  
+    left: 0;
 }
 .footer_section {
   padding: 24px;
@@ -272,8 +329,9 @@ span.small {
 
 .wrr {
   width: 85%;
-  margin: 34px 0 35px 0px;
+  margin: 34px 0 222px 0px;
   background: #fff;
+  height: 450px;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -422,4 +480,162 @@ span.small {
     justify-content: center;
 }
 
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+/* start Client */
+
+
+.client {
+  text-align: center;
+}
+
+.client h1 {
+  margin: 18px 0 17px 0px;
+}
+
+.client span {
+  font-size: 21px;
+  font-family: auto;
+  margin: 6px 10px 0;
+}
+
+.clients_container {
+  display: flex;
+  column-gap: 12px;
+  row-gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 18px 0 18px;
+}
+.client-card img {
+  width:299px;
+}
+.client-card{
+  margin: 12px 0 12px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* blog start */
+
+.blog-section {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 40px 0;
+}
+
+.blog-list {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 60px;
+}
+
+.blog-item {
+  flex-grow: 0;
+  width: 290px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.blog-image img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-category {
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+}
+
+.blog-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+
+.blog-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.blog-actions {
+  margin-top: 20px;
+}
+
+.learn-more {
+  color: #3f51b5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.learn-more-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.likes,
+.comments {
+  margin-right: 10px;
+  color: #999;
+  font-size: 14px;
+}
+
+
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.primary-button {
+  background-color: #4F46E5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
 }
