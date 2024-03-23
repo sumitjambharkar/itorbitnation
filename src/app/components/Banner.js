@@ -6,7 +6,7 @@ const Banner = () => {
     <>
       <div className="banner">
       <div className="banner_box">
-        <h3>Digital Marketing Agency || Digital Marketing Institute</h3>
+        <h1>Digital Marketing Agency || Digital Marketing Institute</h1>
         <h6>We are currently inventing and changing the future.</h6>
         <div className="banner_button">
         <button className="dsbtn"><a href="tel:918097144808" target="_blank">Call Us</a></button>

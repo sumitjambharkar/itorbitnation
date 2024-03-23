@@ -200,14 +200,16 @@ text-decoration: none;
   flex-direction: column;
 }
 
-.banner_box h3 {
+.banner_box h1 {
   font-size: 34px;
   margin: 17px 0px 22px 24px;
+  text-align: center;
 }
 
 .banner_box h6 {
   font-size: 18px;
   padding: 0 0 0 23px;
+  text-align: center;
   /* CONTAIN-INTRINSIC-BLOCK-SIZE: 0; */
 }
 
