@@ -1,6 +1,34 @@
-import React from 'react'
+"use client"
+
+import config from "@/config"
+import axios from "axios"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 
 const page = () => {
+  
+  const [resume, setResume] = useState([])
+  const [loading,setLoading] = useState(true)
+
+  useEffect(() => {
+    getData()
+  }, [])
+  
+  const getData =async()=>{
+    try {
+      const result = await axios.get(`${config}/api/resume`)
+      setResume(result.data);
+      setLoading(false)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  if (loading) {
+    return <div className="loading"><h1>Loading.......</h1></div>
+  }
+
+
   return (
     <>
     <section className="pricing-section">
@@ -10,30 +38,16 @@ const page = () => {
       <p className="section-description">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.</p>
     </div>
     <div className="cards-container">
-      <div className="pricing-card">
+      {resume.map((doc)=>(
+        <div className="pricing-card">
         <div className="card-content">
-          <img src='https://res.cloudinary.com/domljtu7l/image/upload/v1710246519/resume_pkggbu.png'/>
+          <img src={doc.image}/>
           <div className='card_center'>
-          <button className="card-button">Get This Resume For FREE</button>
+          <Link href={`/resume/${doc._id}`}  className="card-button">Get This Resume For FREE</Link>
           </div>
         </div>
       </div>
-      <div className="pricing-card">
-        <div className="card-content">
-          <img src='https://res.cloudinary.com/domljtu7l/image/upload/v1710246519/resume_pkggbu.png'/>
-          <div className='card_center'>
-          <button className="card-button">Get This Resume For FREE</button>
-          </div>
-        </div>
-      </div>
-      <div className="pricing-card">
-        <div className="card-content">
-          <img src='https://res.cloudinary.com/domljtu7l/image/upload/v1710246519/resume_pkggbu.png'/>
-          <div className='card_center'>
-          <button className="card-button">Get This Resume For FREE</button>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   </div>
 </section>

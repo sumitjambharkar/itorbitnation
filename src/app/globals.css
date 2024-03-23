@@ -16,7 +16,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-around;
-  height: 70px;
+  height: 85px;
   background-color: #e2f5fb;
   align-items: center;
 }
@@ -718,6 +718,7 @@ span.small {
 
 .card-content img {
   width: 300px;
+  height: 380px 
 }
 
 .pricing-card {
@@ -728,6 +729,7 @@ span.small {
   display: flex;
   justify-content: center;
   margin: 18px;
+  column-gap: 12px 
 }
 .card-content {
   padding: 20px;
@@ -737,12 +739,7 @@ span.small {
 
 }
 
-.resume{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+
 
 .card-title {
   font-size: 1rem;
@@ -761,6 +758,17 @@ span.small {
   font-size: 1rem;
   color: #666;
   margin-left: 5px;
+}
+.tox:not([dir=rtl]) .tox-statusbar__branding {
+  margin-left: 2ch;
+  display: none;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
 }
 
 .card-feature {
