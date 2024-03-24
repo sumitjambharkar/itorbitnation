@@ -3,7 +3,8 @@ import config from "@/config";
 import { Editor } from "@tinymce/tinymce-react";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
-
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 const page = ({ params }) => {
   const editorRef = useRef(null);
@@ -30,8 +31,9 @@ const page = ({ params }) => {
     printWindow.document.close();
     printWindow.print();
   };
-  const generatePDF = async () => {
-    
+
+  const downloadPdf = () => {
+    const editorContent = editorRef.current.getContent();
   };
 
   if (loading) {
@@ -51,7 +53,7 @@ const page = ({ params }) => {
             <button onClick={printResume} className="card-button">
               Print
             </button>
-            <button onClick={generatePDF} className="card-button">
+            <button onClick={downloadPdf} className="card-button">
               Download
             </button>
           </div>

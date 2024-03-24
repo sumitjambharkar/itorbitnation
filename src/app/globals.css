@@ -800,3 +800,110 @@ a.card-button {
   display: flex;
   align-items: center;
 }
+
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+
+/* start signup */
+
+/* styles.css */
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+}
+
+.form-container {
+  width: 350px;
+    margin: 48px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.input-container {
+  margin-top: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #374151;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #d2d6dc;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form_head h2 {
+  text-align: center;
+  margin: 24px;
+  font-size: 20px;
+}
+.password-text {
+  font-size: 0.875rem;
+  float: right;
+}
+
+.forgot-password {
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  background-color: black;
+  border-radius: 0.375rem;
+  transition: background-color 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #4338ca;
+}
+
+.register-text {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+  cursor: pointer;
+}
+
+.register-link {
+  font-weight: 600;
+  color: #4f46e5;
+  text-align: center;
+}
+
+.register-link:hover {
+  color: #4338ca;
+  text-align: center;
+}

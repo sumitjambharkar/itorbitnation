@@ -59,7 +59,7 @@ function Navbar() {
           </Link>
           <div className="dropdown-content">
               <div className="card">
-              <Link href="/resume">Free Resume</Link>
+              <Link onClick={toggleDrawer}  href="/resume">Free Resume</Link>
               
               </div>
             </div>
@@ -77,6 +77,11 @@ function Navbar() {
         <li>
           <Link onClick={toggleDrawer} href="/contact">
             Contact Us
+          </Link>
+        </li>
+        <li>
+          <Link onClick={toggleDrawer} href="/signup">
+            Sign Up
           </Link>
         </li>
       </div>
