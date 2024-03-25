@@ -1,17 +1,34 @@
 "use client"
+import config from '@/config'
+import axios from 'axios'
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 
 const page = () => {
+   
     const [show, setShow] = useState(false)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const router = useRouter
 
-    const register = () => {
-        console.log(email,password);
+    const register = async() => {
+        try {
+          const result = await axios.post(`${config}/api/register`,{email,password})
+          console.log(result);
+        } catch (error) {
+          console.log(error);
+        }
     }
 
-    const login =() => {
-        console.log(email,password);
+    const login =async() => {
+      try {
+        const result = await axios.post(`${config}/api/login`,{email,password})
+        console.log(result);
+        router.push("/")
+
+      } catch (error) {
+        console.log(error);
+      }
     }
 
   return (
@@ -20,15 +37,12 @@ const page = () => {
         <div className='form_head'>{show?<h2>Start Your Journey</h2>:<h2>Sign In To An Existing Account</h2>}</div>
       <div className="form">
         <div className="form-group">
-          <label for="email" className="label">Email Id</label>
+          <label  className="label">Email Id</label>
           <div className="input-container">
             <input
              value={email}
               onChange={(e)=>setEmail(e.target.value)}
-              id="email"
-              name="email"
               type="email"
-              autoComplete="email"
               required
               className="input"
             />
@@ -37,7 +51,7 @@ const page = () => {
   
         <div className="form-group">
           <div className="flex items-center justify-between">
-            <label for="password" className="label">Password</label>
+            <label  className="label">Password</label>
             <div className="password-text">
               <a href="#" className="forgot-password">Forgot password?</a>
             </div>
@@ -46,10 +60,7 @@ const page = () => {
             <input
               value={password}
               onChange={(e)=>setPassword(e.target.value)}
-              id="password"
-              name="password"
               type="password"
-              autoComplete="current-password"
               required
               className="input"
             />

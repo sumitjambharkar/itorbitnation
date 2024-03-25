@@ -10,7 +10,7 @@ export async function POST (request) {
     const {email,password} =await request.json()
 
     try {
-        const existUser = await User.findOne(email)
+        const existUser = await User.findOne({ email: email });
         if (existUser) {
             return NextResponse.json({message:"Email allredy exist"})
         }
@@ -20,7 +20,7 @@ export async function POST (request) {
             email:email,
             password:hashPassword
         })
-        user.save()
+        await user.save()
         return NextResponse.json({message:"Register Succesfully"})
     } catch (error) {
         return NextResponse.json({message:error})

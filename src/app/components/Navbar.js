@@ -9,7 +9,7 @@ function Navbar() {
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
-
+  
   return (
     <div className="navbar">
       <div className="brand">
