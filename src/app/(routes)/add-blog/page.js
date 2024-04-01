@@ -24,7 +24,7 @@ const page = () => {
       [name]: value,
       
       // Auto-generate slug if name is provided
-      ...(name === 'name' && value && { slug: value.toLowerCase().replace(/\s+/g, '-') })
+      ...(name === 'seoTitle' && value && { slug: value.toLowerCase().replace(/\s+/g, '-') })
     }));
   };
   
@@ -53,9 +53,6 @@ const page = () => {
    <div className='form-group-full'>
    <div className="form-group">
       <input name="name" value={data.name} onChange={handleInputChange} className="input-field" placeholder='Name' type='text'/>
-    </div>
-    <div className="form-group">
-      <input name="slug" value={data.slug}  className="input-field" placeholder='Slug' type='text'/>
     </div>
    </div>
     <div className="form-group-full">
@@ -109,6 +106,11 @@ const page = () => {
     <div className="form-group-full">
     <div className="form-group">
       <input  name="seoDescription" value={data.seoDescription} onChange={handleInputChange} className="input-field" placeholder='SEO Description' type='text'/>
+    </div>
+    </div>
+    <div className="form-group-full">
+    <div className="form-group">
+      <input name="slug" value={data.slug}  className="input-field" placeholder='Slug' type='text'/>
     </div>
     </div>
     <div className="form-group-full">
