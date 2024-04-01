@@ -1,8 +1,26 @@
+"use client";
+import config from '@/config'
+import axios from 'axios'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const page = () => {
-  let arr = [1,2,3,4,5,6,7,8]
+
+  const [blogs, setblogs] = useState([])
+  
+
+  const getBlogs = async() => {
+    try{
+      const result = await axios.get(`${config}/api/blog`)
+      setblogs(result.data);
+    }catch(err){
+
+    }
+  }
+
+  useEffect(() => {
+    getBlogs()
+  }, [])
   return (
     <section className="blog-section">
       <div className='heading_title'>
@@ -10,16 +28,15 @@ const page = () => {
     </div>
   <div className="container">
     <div className="blog-list">
-      {arr.map((doc)=>(
+      {blogs.map((doc)=>(
         <div className="blog-item">
         <div className="blog-image">
-          <img src="https://res.cloudinary.com/dsrc5z9na/image/upload/v1701769162/New_Project_57_sqba4z.png" alt="blog"/>
+          <img src={doc.image} alt="blog"/>
         </div>
         <div className="blog-content">
-          <h1 className="blog-title">The Catalyzer</h1>
-          <p className="blog-description">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+          <h1 className="blog-title">{doc.name}</h1>
           <div className="blog-actions">
-            <Link href="blog/126" className="learn-more">Read More</Link>
+            <Link href={`/blog/${doc.slug}`} className="learn-more">Read More</Link>
           </div>
         </div>
       </div>
