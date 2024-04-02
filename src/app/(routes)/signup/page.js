@@ -1,7 +1,7 @@
 "use client"
 import config from '@/config'
 import axios from 'axios'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 
 const page = () => {
@@ -9,7 +9,7 @@ const page = () => {
     const [show, setShow] = useState(false)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const router = useRouter
+    const router = useRouter();
 
     const register = async() => {
         try {

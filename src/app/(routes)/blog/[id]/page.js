@@ -1,7 +1,6 @@
 "use client";
 import config from "@/config";
 import axios from "axios";
-import Image from "next/image"
 import { useEffect, useState } from "react";
 
 
@@ -31,7 +30,7 @@ const page = ({params}) => {
   <div class="container">
     <div class="hero-content">
     <h1 class="hero-title">{blog.name}</h1>
-      <Image width={100} height={650} src={blog.image} alt="hero image" class="hero-image"/>
+      <img width={100} height={650} src={blog.image}  class="hero-image"/>
       <div class="text-content">
       
         <div

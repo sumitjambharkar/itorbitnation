@@ -4,9 +4,11 @@ import { useRef, useState } from "react";
 import axios from 'axios';
 import config from "@/config";
 import { Editor } from "@tinymce/tinymce-react";
+import { useRouter } from 'next/navigation'
 
 const page = () => {
   const editorRef = useRef(null);
+  const router = useRouter
   const [data, setData] = useState({
     name: "",
     slug: "",
@@ -24,7 +26,8 @@ const page = () => {
       [name]: value,
       
       // Auto-generate slug if name is provided
-      ...(name === 'seoTitle' && value && { slug: value.toLowerCase().replace(/\s+/g, '-') })
+      ...(name === 'seoTitle' && value && { slug: value.toLowerCase().replace(/\s+/g, '-') }),
+      ...(name === 'slug' && value && { slug: value.toLowerCase().replace(/\s+/g, '-') })
     }));
   };
   
@@ -41,9 +44,8 @@ const page = () => {
     formData.append('file', file);
 
     try {
-      const result  = await axios.post(`${config}/api/blog`,formData)
-      console.log(result);  
-      alert("Added")
+      await axios.post(`${config}/api/blog`,formData)
+      router.push("/blog")
     } catch (error) {
       console.log(error);
     }
@@ -110,7 +112,7 @@ const page = () => {
     </div>
     <div className="form-group-full">
     <div className="form-group">
-      <input name="slug" value={data.slug}  className="input-field" placeholder='Slug' type='text'/>
+      <input name="slug" value={data.slug} onChange={handleInputChange}  className="input-field" placeholder='Slug' type='text'/>
     </div>
     </div>
     <div className="form-group-full">

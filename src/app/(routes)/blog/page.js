@@ -34,7 +34,7 @@ const page = () => {
           <img src={doc.image} alt="blog"/>
         </div>
         <div className="blog-content">
-          <h1 className="blog-title">{doc.name}</h1>
+          <h1 className="blog-title">{doc.name.substring(0,35)}...</h1>
           <div className="blog-actions">
             <Link href={`/blog/${doc.slug}`} className="learn-more">Read More</Link>
           </div>
