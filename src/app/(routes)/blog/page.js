@@ -25,6 +25,10 @@ const page = () => {
     <section className="blog-section">
       <div className='heading_title'>
     <h1>Blogs</h1>
+   <h3> <Link href='/add-blog'>
+   <ion-icon size='large' name="add-circle-outline"></ion-icon>
+   </Link></h3>
+  
     </div>
   <div className="container">
     <div className="blog-list">

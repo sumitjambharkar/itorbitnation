@@ -12,74 +12,52 @@ function Navbar() {
   
   return (
     <div className="navbar">
-      <div className="brand">
+      <Link href='/' className="brand">
         <Image
           priority
           height={100}
           width={200}
           src="https://res.cloudinary.com/dsrc5z9na/image/upload/v1699704544/logoIT_1_jeeklf.png"
         />
-      </div>
+      </Link>
       <div className={`drawer ${drawerOpen ? "open" : ""}`} id="appDrawer">
-        <li>
-          <Link onClick={toggleDrawer} href="/">
-            Home
+      <li>
+          <Link onClick={toggleDrawer} href="/about">
+            About Us
           </Link>
         </li>
+      
         <li>
           <Link onClick={toggleDrawer} href="/service">
-            Service
+            Services
           </Link>
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/course">
-            Course
+            Courses
           </Link>
         </li>
+       
         <li className="dropdown">
-          <Link className="dropbtn"  href="#">
-            Location
-          </Link>
-          <div className="dropdown-content">
-              <div className="card">
-              <Link href="#">Andheri</Link>
-              <Link href="#">Bandra</Link>
-              <Link href="#">Jogeshwree</Link>
-              
-              
-              </div>
-            </div>
-        </li>
-        <li className="dropdown">
-          <Link className="dropbtn"  href="#">
+          <Link className="dropbtn"  href="/freetech">
             Free Tech
           </Link>
-          <div className="dropdown-content">
-              <div className="card">
-              <Link onClick={toggleDrawer}  href="/resume">Free Resume</Link>
-              <Link onClick={toggleDrawer}  href="/add-blog">Create Blog</Link>
-              
-              </div>
-            </div>
+        
         </li>
         <li>
           <Link onClick={toggleDrawer} href="/blog">
             Blog
           </Link>
         </li>
-        <li>
-          <Link onClick={toggleDrawer} href="/about">
-            About Us
-          </Link>
-        </li>
+     
         <li>
           <Link onClick={toggleDrawer} href="/contact">
             Contact Us
           </Link>
         </li>
-        <li>
-          <Link onClick={toggleDrawer} href="/signup">
-            Sign Up
+        <li className='avtar'>
+          <Link  onClick={toggleDrawer} href="/signup">
+          <ion-icon className='avtar' size="large" name="person-circle-outline"></ion-icon>
           </Link>
         </li>
       </div>
