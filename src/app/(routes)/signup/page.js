@@ -3,6 +3,7 @@ import config from '@/config'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
+import Swal from 'sweetalert2';
 
 const page = () => {
    
@@ -14,20 +15,40 @@ const page = () => {
     const register = async() => {
         try {
           const result = await axios.post(`${config}/api/register`,{email,password})
-          console.log(result);
+          if(result.status===200){
+            Swal.fire({
+              title: `${result.data.message}`,
+              text: "You clicked the button!",
+              icon: "success"
+            });
+          }
+          
         } catch (error) {
-          console.log(error);
+          Swal.fire({
+            title: `${error.response.data.message}`,
+            text: "You clicked the button!",
+            icon: "error"
+          });
         }
     }
 
     const login =async() => {
       try {
         const result = await axios.post(`${config}/api/login`,{email,password})
-        console.log(result);
-        router.push("/")
-
+        if(result.status===200){
+          Swal.fire({
+            title: `${result.data.message}`,
+            text: "You clicked the button!",
+            icon: "success"
+          });
+          router.push("/")
+        }
       } catch (error) {
-        console.log(error);
+        Swal.fire({
+          title: `${error.response.data.message}`,
+          text: "You clicked the button!",
+          icon: "error"
+        });
       }
     }
 

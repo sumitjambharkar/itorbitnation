@@ -4,7 +4,7 @@ import axios from 'axios';
 import config from "@/config";
 import { Editor } from "@tinymce/tinymce-react";
 import { useRouter } from 'next/navigation'
-
+import Swal from 'sweetalert2'
 const Page = () => {
   const editorRef = useRef(null);
   const router = useRouter()
@@ -71,6 +71,11 @@ const Page = () => {
 
     try {
       await axios.post(`${config}/api/blog`, formData);
+      Swal.fire({
+        title: "Good job!",
+        text: "Added Blog!",
+        icon: "success"
+      });
       router.push("/blog");
     } catch (error) {
       console.log(error);

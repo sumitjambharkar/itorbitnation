@@ -5,7 +5,7 @@ const page = () => {
    <div className='rr' >
 
 <div className='formm'>
-  <form action="/action_page.php">
+  <form>
     <label for="fname">Full Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Enter Your Full Name.."/>
 
