@@ -13,6 +13,13 @@ const page = () => {
     const router = useRouter();
 
     const register = async() => {
+      if (!email|| !password) {
+        Swal.fire({
+          title: `Input Field Required`,
+          text: "You clicked the button!",
+          icon: "error"
+        });
+      }else{
         try {
           const result = await axios.post(`${config}/api/register`,{email,password})
           if(result.status===200){
@@ -30,25 +37,35 @@ const page = () => {
             icon: "error"
           });
         }
+      }
     }
 
     const login =async() => {
-      try {
-        const result = await axios.post(`${config}/api/login`,{email,password})
-        if(result.status===200){
-          Swal.fire({
-            title: `${result.data.message}`,
-            text: "You clicked the button!",
-            icon: "success"
-          });
-          router.push("/")
-        }
-      } catch (error) {
+      if (!email|| !password) {
         Swal.fire({
-          title: `${error.response.data.message}`,
+          title: `Input Field Required`,
           text: "You clicked the button!",
           icon: "error"
         });
+      }else{
+        try {
+          const result = await axios.post(`${config}/api/login`,{email,password})
+          if(result.status===200){
+            Swal.fire({
+              title: `${result.data.message}`,
+              text: "You clicked the button!",
+              icon: "success"
+            });
+            window.location.reload()
+            router.push("/")
+          }
+        } catch (error) {
+          Swal.fire({
+            title: `${error.response.data.message}`,
+            text: "You clicked the button!",
+            icon: "error"
+          });
+        }
       }
     }
 

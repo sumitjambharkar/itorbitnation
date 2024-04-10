@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
           nomodule
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         ></script>
+        
       </head>
       <body className={inter.className}>
         <Navbar />

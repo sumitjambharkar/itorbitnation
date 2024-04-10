@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: cursive;
+
 }
 
 .navbar {
@@ -344,6 +345,7 @@ span.small {
   padding: 20px 60px 30px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
 .wrr .content{
   display: flex;
   align-items: center;
@@ -352,7 +354,7 @@ span.small {
 .eer{
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  background: #E0EDFF;
 }
 .wrr .content .left-side{
   width: 25%;
@@ -411,14 +413,19 @@ span.small {
 .right-side .input-box textarea{
   height: 100%;
   width: 100%;
-  border: none;
-  outline: none;
+  border: 1px solid #E7E8EB;
   font-size: 16px;
-  background: #F0F1F8;
+  outline:none;
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
 }
+
+.right-side .input-box input,.right-side .input-box textarea::placeholder {
+ 
+  font-family: cursive;
+}
+
 .right-side .message-box{
   min-height: 110px;
 }
@@ -622,13 +629,21 @@ span.small {
   font-size: 14px;
 }
 
+.heading_title_contact{
+  text-align: center;
+  padding: 24px;
+  background: #E0EDFF;
+  font-family: cursive;
+}
 
 .heading_title {
   text-align: center;
-  margin: 32px 0 32px 0;
+  padding: 24px;
+  
 }
 .heading_title h1 {
   font-size: 42px;
+  font-family: cursive;
 }
 .hero-content {
   display: flex;
@@ -840,12 +855,18 @@ a.card-button {
   font-weight: bold;
   line-height: 1.8rem;
 }
+.input-container input {
+  border: 1px solid #e7e8eb;
+  padding: 8px;
 
-.form-container {
-  width: 350px;
-    margin: 48px;
 }
-
+.form-container {
+  width: 420px;
+  background: white;
+  margin: 58px;
+  padding: 24px;
+  border-radius: 12px;
+}
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -858,6 +879,9 @@ a.card-button {
 
 .input-container {
   margin-top: 0.5rem;
+}
+.input:focus{
+  outline: 1px solid #4338ca;
 }
 
 .input {
@@ -874,7 +898,8 @@ a.card-button {
 }
 .form_head h2 {
   text-align: center;
-  margin: 24px;
+  margin: 18px;
+  font-family: cursive;
   font-size: 20px;
 }
 .password-text {
@@ -889,7 +914,7 @@ a.card-button {
 
 .submit-button {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 12px !important;
   font-size: 1rem;
   font-weight: 600;
   border: none;
