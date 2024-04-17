@@ -23,22 +23,6 @@ const Footer = () => {
         <div className="footer_list">
           <ul>
             <li>
-              <Link href="/ ">FaQs</Link>
-            </li>
-            <li>
-              <Link href="/ ">Related-Websites</Link>
-            </li>
-            <li>
-              <Link href="/ ">Career</Link>
-            </li>
-            <li>
-              <Link href="/ ">Review</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="footer_list">
-          <ul>
-            <li>
               <a target="_blank" href="https://www.facebook.com/cleannation00">
                 Facebook
               </a>
@@ -68,10 +52,10 @@ const Footer = () => {
         <div className="footer_list">
           <ul>
             <li>
-              Phone : <Link href="tel:+917021595850">7021595850</Link>
+              Phone : <Link href="tel:+917021595850">8898699498</Link>
             </li>
             <li>
-              Phone : <Link href="tel:+919323969471">9323969471</Link>
+              Phone : <Link href="tel:+919323969471">8097144808</Link>
             </li>
             <li>____________________________</li>
             <li>

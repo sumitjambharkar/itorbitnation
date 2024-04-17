@@ -2,9 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Asap Condensed", sans-serif;
 }
 html {
   height: 100%;
+}
+a{
+  text-decoration: none;
+  
+}
+.chosebtn{
+  cursor: pointer;
 }
 
 body {
@@ -12,6 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: cursive;
+  background-color: #e0edff;
+ 
 
 }
 
@@ -170,6 +180,8 @@ body {
 }
 .FOOTNAME {
   text-align: center;
+  font-size: medium;
+  font-weight: 400;
 }
 .footer_list ul li a {
 color: white;
@@ -239,7 +251,7 @@ text-decoration: none;
 .choose_field {
   background: black;
   padding: 12px;
-  margin: 42px;
+  margin: 15px;
 }
 
 .choose_field h1 {
@@ -290,16 +302,21 @@ span.small {
 /* ------------------------------------------------------------------------------- */
 
 .about {
-  padding: 34px;
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 58px;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+.secondabout{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 10px;
 }
 
 .about_box {
-  width: 600px;
+  width: 550px;
+  margin: 10px;
 }
 .box_pack h1 {
   margin: 10px 0 14px 0;
@@ -331,6 +348,25 @@ span.small {
   margin-top: 24px;
 }
 
+@media only screen and (max-width: 600px) {
+
+.about {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+  
+}
+.secondabout{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+}
 /* ------------------------------------------------------------------------------------------- */
 
 /* start Contact */
@@ -497,6 +533,15 @@ span.small {
 
 }
 
+/* inqury */
+@media only screen and (max-width: 600px) {
+  .pp{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+  }
+}
+
 
 /* ----------------------------------------------------------------------------------- */
 /* start Client */
@@ -567,6 +612,8 @@ span.small {
   width: 100%;
   height: auto;
   height: 200px;
+  padding: 5px;
+  background-color:grey;
 }
 
 .blog-content {
@@ -1008,7 +1055,7 @@ a.card-button {
   height:400px;
 }
 .as{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
   text-align: center;
   padding: 15px;
   border-radius: 13px;
@@ -1047,7 +1094,7 @@ input[type=submit]:hover {
 .formm{
   margin:50px;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: white;
   padding: 20px;
   width: 400px;
   height: auto;
@@ -1057,6 +1104,7 @@ input[type=submit]:hover {
 .rr{
   display: flex;
   justify-content: center;
+  background-color: #e0edff;
 }
 
 /* ------------------------------------------------------------------------------------------- */
