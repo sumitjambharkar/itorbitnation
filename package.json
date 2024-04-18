@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.2",
     "@tinymce/tinymce-react": "^4.3.2",
     "aos": "^2.3.4",
     "axios": "^1.6.8",
@@ -18,7 +19,7 @@
     "jsonwebtoken": "^9.0.2",
     "jspdf": "^2.5.1",
     "mongoose": "^8.2.3",
-    "next": "14.1.4",
+    "next": "^14.2.2",
     "nodemailer": "^6.9.13",
     "print-js": "^1.6.0",
     "react": "^18",
