@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { GoogleTagManager } from '@next/third-parties/google'
  
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +21,7 @@ export default function RootLayout({ children }) {
       <head>
         
      
-      <GoogleTagManager gtmId="GTM-WK8V8NQT" />
+      <meta name="google-site-verification" content="Ua5mNWF5FxDPW5udmRq9QjQZ4nB1fQThIw9BJ89rLIw" />
 
       <link rel="icon" href="" />
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
