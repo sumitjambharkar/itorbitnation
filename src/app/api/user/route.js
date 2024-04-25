@@ -3,7 +3,7 @@ import {NextResponse,NextRequest} from "next/server";
 import User from "@/model/User";
 
 
-export async function GET (NextRequest) {
+export async function GET (req:NextRequest) {
     try {
        const userId = await getTokenData(NextRequest);
        const user = await User.findById({_id:userId}).select("-password");
