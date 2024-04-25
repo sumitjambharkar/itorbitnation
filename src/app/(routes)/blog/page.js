@@ -59,7 +59,7 @@ const page = () => {
             <Link href={`/blog/${doc.slug}`} className="learn-more">Read More</Link>
             {user?.email==="ankesh@gmail.com"?<Link onClick={()=>deleteBlog(doc._id)} href="#">Delete</Link>
             :null}
-            <Link href={`/add-blog/${doc.slug}`} >Edit</Link>
+            {user?.email?<Link href={`/add-blog/${doc.slug}`} >Edit</Link>:null}
           </div>
         </div>
       </div>
