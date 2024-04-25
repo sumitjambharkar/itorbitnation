@@ -15,7 +15,6 @@ const page = () => {
     getUserDetails()
   }, [])
   
-
   const getUserDetails =async ()=> {
     const result = await axios.get(`${config}/api/user`)
     setUser(result.data.data);
