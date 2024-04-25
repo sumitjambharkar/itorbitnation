@@ -19,8 +19,8 @@ const page = () => {
           <h1 className="blog-title">Free Create Resume</h1>
           <p className="blog-description">You can make and save as many resumes as you'd like in Adobe Express for free.</p>
           <div className="blog-actions">
-            <div class="button-container">
-         <Link href='/resume'> <button class="primary-button">Free Use</button>  </Link> 
+            <div className="button-container">
+         <Link href='/resume'> <button className="primary-button">Free Use</button>  </Link> 
         </div>
           </div>
         </div>

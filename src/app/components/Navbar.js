@@ -81,13 +81,13 @@ function Navbar() {
           {!user? <Link  onClick={toggleDrawer} href="/signup">
           SignUp
           </Link>:
-          <div class="dropdown">
-            <button class="dropbtn">
+          <div className="dropdown">
+            <button className="dropbtn">
             <div className="user">
             {user.email.substring(0,1)}
           </div>
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <Link href="/add-blog">Add Blog</Link>
               <Link onClick={logout} href="#">Logout</Link>
             </div>

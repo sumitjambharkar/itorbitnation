@@ -88,9 +88,9 @@ const page = () => {
                  {doc.info}
                 </p>
                 <div className="blog-actions">
-                  <div class="button-container">
-                    <button class="primary-button">Call Now</button>
-                    <button class="primary-button">WhatsApp</button>
+                  <div className="button-container">
+                    <button className="primary-button">Call Now</button>
+                    <button className="primary-button">WhatsApp</button>
                   </div>
                 </div>
               </div>

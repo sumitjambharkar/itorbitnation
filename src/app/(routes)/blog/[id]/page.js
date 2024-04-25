@@ -26,12 +26,14 @@ const page = ({params}) => {
    
 
   return (
-    <section class="hero-section">
-  <div class="container">
-    <div class="hero-content">
-    <h1 class="hero-title">{blog.name}</h1>
-      <img width={100} height={650} src={blog.image}  class="hero-image"/>
-      <div class="text-content">
+    <section className="hero-section">
+  <div className="container">
+    <div className="hero-content">
+    <h1 className="hero-title">{blog.name}</h1>
+       <div className="img_box">
+       <img  src={blog.image}  className="hero-image"/>
+       </div>
+      <div className="text-content">
       
         <div
           dangerouslySetInnerHTML={{
