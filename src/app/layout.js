@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        
+      <link rel="icon" href="/favicon.ico" sizes="any" />
      
       <meta name="google-site-verification" content="Ua5mNWF5FxDPW5udmRq9QjQZ4nB1fQThIw9BJ89rLIw" />
 
