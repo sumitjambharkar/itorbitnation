@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -96,19 +98,7 @@ function Navbar() {
       </div>
       <ul className="mobile-support">
         <div onClick={toggleDrawer}>
-          {drawerOpen ? (
-            <div className="hamburger-menu">
-              <div className="hamburger-line"></div>
-              <div className="hamburger-line"></div>
-              <div className="hamburger-line"></div>
-            </div>
-          ) : (
-            <div className="hamburger-menu">
-              <div className="hamburger-line"></div>
-              <div className="hamburger-line"></div>
-              <div className="hamburger-line"></div>
-            </div>
-          )}
+          {drawerOpen ? (<CloseIcon fontSize="large"/>) : ( <MenuIcon fontSize="large"/>)}
         </div>
       </ul>
     </div>
