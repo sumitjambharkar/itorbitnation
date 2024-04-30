@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
      
       <meta name="google-site-verification" content="Ua5mNWF5FxDPW5udmRq9QjQZ4nB1fQThIw9BJ89rLIw" />
 
-      <link rel="icon" href="" />
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"/>

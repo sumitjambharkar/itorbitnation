@@ -663,7 +663,9 @@ span.small {
   line-height: 1.6;
   color: #666;
 }
-
+.text-content {
+  padding: 0px 94px 0 103px;
+}
 .blog-actions {
   margin-top: 20px;
   display: flex;
