@@ -59,7 +59,8 @@ export async function POST(request) {
 }
 
 
-export async function GET () {
+export async function GET (res) {
+  res.setHeader('Access-Control-Allow-Origin', 'https://www.itorbitnation.com');
     try {
         const showData = await Blog.find().sort({ createdAt: -1 });
         return NextResponse.json(showData);
