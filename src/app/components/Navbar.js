@@ -10,7 +10,6 @@ import CloseIcon from '@mui/icons-material/Close';
 function Navbar() {
   const [user, setUser] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [user, setUser] = useState("")
   const router =useRouter()
 
   useEffect(() => {
@@ -94,7 +93,8 @@ function Navbar() {
               <Link href="/add-blog">Add Blog</Link>
               <Link onClick={logout} href="#">Logout</Link>
             </div>
-          )}
+            </div>
+          }
         </li>
       </div>
       <ul className="mobile-support">

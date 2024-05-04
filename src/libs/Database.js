@@ -10,3 +10,5 @@ const connectDatabase = async () => {
 }
 
 export default connectDatabase
+
+// mongodb+srv://sumittechdeveloper:sumittechdeveloper@cluster0.zzlhc7i.mongodb.net/cleannation
