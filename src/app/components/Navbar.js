@@ -5,6 +5,7 @@ import Image from "next/image";
 import axios from "axios";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import config from "@/config";
 
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -16,10 +17,17 @@ function Navbar() {
   }, [])
   
 
-  const getUserDetails =async ()=> {
-    const result = await axios.get("/api/user")
-    setUser(result.data.data);
-  }
+  const getUserDetails = async () => {
+    try {
+      const result = await axios.get(`${config}/api/user`);
+      const userData = result.data.data;
+      setUser(userData);
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+      // Handle error gracefully, e.g., redirect to login page or display an error message
+    }
+  };
+  
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -30,7 +38,7 @@ function Navbar() {
       await axios.get("/api/logout")
       window.location.reload()
     } catch (error) {
-      
+      log
     }
   }
 
