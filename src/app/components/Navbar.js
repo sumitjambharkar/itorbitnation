@@ -9,8 +9,7 @@ import config from "@/config";
 
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [user, setUser] = useState(null)
-
+  const router =useRouter()
 
   useEffect(() => {
     getUserDetails()
@@ -99,7 +98,7 @@ function Navbar() {
               <Link href="/add-blog">Add Blog</Link>
               <Link onClick={logout} href="/">Logout</Link>
             </div>
-          </div>
+            </div>
           }
         </li>
       </div>
