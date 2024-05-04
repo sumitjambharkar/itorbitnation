@@ -3,25 +3,31 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import config from "@/config";
 
 function Navbar() {
-  const [user, setUser] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [user, setUser] = useState("")
-  const router =useRouter()
+  const [user, setUser] = useState(null)
+
 
   useEffect(() => {
-    getUserDetails();
-  }, []);
+    getUserDetails()
+  }, [])
   
 
-  const getUserDetails =async ()=> {
-    const result = await axios.get("/api/user")
-    setUser(result.data.data);
-  }
+  const getUserDetails = async () => {
+    try {
+      const result = await axios.get(`${config}/api/user`);
+      const userData = result.data.data;
+      setUser(userData);
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+      // Handle error gracefully, e.g., redirect to login page or display an error message
+    }
+  };
+  
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -30,10 +36,9 @@ function Navbar() {
   const logout = async () => {
     try {
       await axios.get("/api/logout")
-      router.push('/')
       window.location.reload()
     } catch (error) {
-      
+      log
     }
   }
 
@@ -92,9 +97,10 @@ function Navbar() {
             </button>
             <div className="dropdown-content">
               <Link href="/add-blog">Add Blog</Link>
-              <Link onClick={logout} href="#">Logout</Link>
+              <Link onClick={logout} href="/">Logout</Link>
             </div>
-          )}
+          </div>
+          }
         </li>
       </div>
       <ul className="mobile-support">
