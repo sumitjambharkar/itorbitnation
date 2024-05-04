@@ -9,7 +9,7 @@ import config from "@/config";
 
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const router =useRouter()
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     getUserDetails()
