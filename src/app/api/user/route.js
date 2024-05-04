@@ -2,7 +2,7 @@ import { getTokenData } from "@/app/helpers/getTokenData";
 import {NextResponse,NextRequest} from "next/server";
 import User from "@/model/User";
 
-
+export const dynamic = 'force-dynamic';
 export async function GET (req) {
     
     try {

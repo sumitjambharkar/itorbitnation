@@ -12,7 +12,7 @@ export const metadata = {
     "Best Digital Marketing Agency in india ,We provide services such as digital marketing services,search engine optimization (SEO)",
 };
 
-export const dynamic = "force-dynamic";
+
 export default function RootLayout({ children }) {
 
     
