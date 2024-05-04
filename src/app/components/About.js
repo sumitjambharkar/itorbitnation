@@ -1,6 +1,7 @@
-import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
+  
   return (
    <>
    <div className="container">
@@ -20,8 +21,8 @@ const About = () => {
          <span>Our mission is to provide top-notch IT education while acting as a catalyst for both professional and personal growth. Our goal is to develop a community of students who are capable of thriving in the quickly changing tech sector.</span>
         </div>
         <div className="box_pack_action">
-            <button>Call Now</button>
-            <button>WhatsApp</button>
+            <button><Link href="tel:+8097144808">Call Now </Link></button>
+            <button> <Link href="https://api.whatsapp.com/send?phone=8097144808">WhatsApp</Link></button>
         </div>
       </div>
      
@@ -39,7 +40,7 @@ const About = () => {
          <div>Excellence: We consistently strive for excellence in everything we do, setting high standards for ourselves and our solutions.</div>
      </div>
      <div className="box_pack_action">
-         <button>Book Service</button>
+         <button><Link href='/contact'>Book Service</Link></button>
 
      </div>
    </div>

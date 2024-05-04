@@ -4,38 +4,34 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 function Navbar() {
+  const [user, setUser] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [user, setUser] = useState("")
-  const router =useRouter()
-
-  useEffect(() => {
-    getUserDetails()
-  }, [])
+  const router = useRouter();
   
-
-  const getUserDetails =async ()=> {
-    const result = await axios.get("/api/user")
+  useEffect(() => {
+    getUserDetails();
+  }, []);
+  
+  const getUserDetails = async () => {
+    const result = await axios.get("/api/user");
     setUser(result.data.data);
-  }
+  };
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  const logout = async() => {
+  const logout = async () => {
     try {
-      await axios.get("/api/logout")
-      router.push('/')
-      window.location.reload()
-    } catch (error) {
-      
-    }
-  }
-
+      await axios.get("/api/logout");
+      router.push("/");
+      window.location.reload();
+    } catch (error) {}
+  };
 
   return (
     <div className="navbar">
@@ -48,57 +44,64 @@ function Navbar() {
         />
       </Link>
       <div className={`drawer ${drawerOpen ? "open" : ""}`} id="appDrawer">
-        <li>
+        <li className="Navmenu">
           <Link onClick={toggleDrawer} href="/about">
             About Us
           </Link>
         </li>
 
-        <li>
+        <li className="Navmenu">
           <Link onClick={toggleDrawer} href="/services">
             Services
           </Link>
         </li>
-        <li>
+        <li className="Navmenu">
           <Link onClick={toggleDrawer} href="/courses">
             Courses
           </Link>
         </li>
 
-        <li>
+        <li className="Navmenu">
           <Link href="/freetech">Free Tech</Link>
         </li>
-        <li>
+        <li className="Navmenu">
           <Link onClick={toggleDrawer} href="/blog">
             Blog
           </Link>
         </li>
 
-        <li>
+        <li className="Navmenu">
           <Link onClick={toggleDrawer} href="/contact">
             Contact Us
           </Link>
         </li>
-        <li>
-          {!user? <Link  onClick={toggleDrawer} href="/signup">
-          SignUp
-          </Link>:
-          <div className="dropdown">
-            <button className="dropbtn">
-            <div className="user">
-            {user.email.substring(0,1)}
-          </div>
-            </button>
-            <div className="dropdown-content">
-              <Link href="/add-blog">Add Blog</Link>
-              <Link onClick={logout} href="#">Logout</Link>
+        <li className="Navmenu">
+          {!user ? (
+            <Link onClick={toggleDrawer} href="/signup">
+              SignUp
+            </Link>
+          ) : (
+            <div className="dropdown">
+              <button className="dropbtn">
+                <div className="user">{user.email.substring(0, 1)}</div>
+              </button>
+              <div className="dropdown-content">
+                <Link href="/add-blog">Add Blog</Link>
+                <Link onClick={logout} href="#">
+                  Logout
+                </Link>
+              </div>
             </div>
-          </div>}
+          )}
         </li>
       </div>
       <ul className="mobile-support">
         <div onClick={toggleDrawer}>
-          {drawerOpen ? (<CloseIcon fontSize="large"/>) : ( <MenuIcon fontSize="large"/>)}
+          {drawerOpen ? (
+            <CloseIcon fontSize="large" />
+          ) : (
+            <MenuIcon fontSize="large" />
+          )}
         </div>
       </ul>
     </div>

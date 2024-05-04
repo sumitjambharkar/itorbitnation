@@ -23,14 +23,14 @@ const Footer = () => {
         <div className="footer_list">
           <ul>
             <li>
-              <a target="_blank" href="https://www.facebook.com/cleannation00">
+              <a target="_blank" href="https://www.facebook.com/profile.php?id=61553803474245">
                 Facebook
               </a>
             </li>
             <li>
               <a
                 target="_blank"
-                href="https://www.instagram.com/star_home_interior/"
+                href="https://www.instagram.com/itorbitnation_/?fbclid=IwAR19Pk2gj6b8F6uvM-he1QtO0UVFxLGlDsdeBQqJeiwkCxMiw13J6HsraGY"
               >
                 Instagram
               </a>
@@ -38,22 +38,18 @@ const Footer = () => {
             <li>
               <a
                 target="_blank"
-                href="https://www.youtube.com/@clean-nation6703"
+                href="https://www.youtube.com/watch?v=bixR-KIJKYM"
               >
                 Youtube
               </a>
             </li>
             <li>
-              
             Business Listing
             </li>
           </ul>
         </div>
         <div className="footer_list">
           <ul>
-            <li>
-              Phone : <Link href="tel:+917021595850">8898699498</Link>
-            </li>
             <li>
               Phone : <Link href="tel:+919323969471">8097144808</Link>
             </li>

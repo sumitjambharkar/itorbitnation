@@ -56,14 +56,13 @@ const Contact = () => {
         <div className="address details">
           <i className="fas fa-map-marker-alt"></i>
           <div className="topic">Address</div>
-          <div className="text-one">Andheri ( W )</div>
+          <div className="text-one">Andheri West</div>
           <div className="text-two">Mumbai-61</div>
         </div>
         <div className="phone details">
           <i className="fas fa-phone-alt"></i>
           <div className="topic">Phone</div>
           <div className="text-one">8097144808</div>
-          <div className="text-two">8898688498</div>
         </div>
         <div className="email details">
           <i className="fas fa-envelope"></i>
