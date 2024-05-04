@@ -3,14 +3,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [user, setUser] = useState("")
-  const router =useRouter()
+  const [user, setUser] = useState(null)
+
 
   useEffect(() => {
     getUserDetails()
@@ -29,7 +28,6 @@ function Navbar() {
   const logout = async() => {
     try {
       await axios.get("/api/logout")
-      router.push('/')
       window.location.reload()
     } catch (error) {
       
@@ -91,7 +89,7 @@ function Navbar() {
             </button>
             <div className="dropdown-content">
               <Link href="/add-blog">Add Blog</Link>
-              <Link onClick={logout} href="#">Logout</Link>
+              <Link onClick={logout} href="/">Logout</Link>
             </div>
           </div>}
         </li>

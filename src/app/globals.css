@@ -32,6 +32,9 @@ body {
   background-color:black;
   align-items: center;
   color: white;
+  position: fixed;
+    z-index: 2;
+    width: 100%;
 }
 .avtar{
   margin-top:-8px;
@@ -932,6 +935,7 @@ a.card-button {
   justify-content: center;
   align-items: center;
   background-color: #E0EDFF;
+  height: 100vh;
 }
 
 .logo {
