@@ -4,22 +4,24 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Navbar() {
   const [user, setUser] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const router = useRouter();
-  
+  const [user, setUser] = useState("")
+  const router =useRouter()
+
   useEffect(() => {
     getUserDetails();
   }, []);
   
-  const getUserDetails = async () => {
-    const result = await axios.get("/api/user");
+
+  const getUserDetails =async ()=> {
+    const result = await axios.get("/api/user")
     setUser(result.data.data);
-  };
+  }
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -27,11 +29,14 @@ function Navbar() {
 
   const logout = async () => {
     try {
-      await axios.get("/api/logout");
-      router.push("/");
-      window.location.reload();
-    } catch (error) {}
-  };
+      await axios.get("/api/logout")
+      router.push('/')
+      window.location.reload()
+    } catch (error) {
+      
+    }
+  }
+
 
   return (
     <div className="navbar">
@@ -75,22 +80,19 @@ function Navbar() {
             Contact Us
           </Link>
         </li>
-        <li className="Navmenu">
-          {!user ? (
-            <Link onClick={toggleDrawer} href="/signup">
-              SignUp
-            </Link>
-          ) : (
-            <div className="dropdown">
-              <button className="dropbtn">
-                <div className="user">{user.email.substring(0, 1)}</div>
-              </button>
-              <div className="dropdown-content">
-                <Link href="/add-blog">Add Blog</Link>
-                <Link onClick={logout} href="#">
-                  Logout
-                </Link>
-              </div>
+        <li>
+          {!user? <Link  onClick={toggleDrawer} href="/signup">
+          SignUp
+          </Link>:
+          <div className="dropdown">
+            <button className="dropbtn">
+            <div className="user">
+            {user.email.substring(0,1)}
+          </div>
+            </button>
+            <div className="dropdown-content">
+              <Link href="/add-blog">Add Blog</Link>
+              <Link onClick={logout} href="#">Logout</Link>
             </div>
           )}
         </li>
@@ -109,3 +111,4 @@ function Navbar() {
 }
 
 export default Navbar;
+export const dynamic = 'force-dynamic';

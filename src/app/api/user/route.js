@@ -2,8 +2,9 @@ import { getTokenData } from "@/app/helpers/getTokenData";
 import {NextResponse,NextRequest} from "next/server";
 import User from "@/model/User";
 
-
+export const dynamic = 'force-dynamic';
 export async function GET (req) {
+    
     try {
        const userId = await getTokenData(req);
        const user = await User.findById({_id:userId}).select("-password");
