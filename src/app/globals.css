@@ -43,8 +43,8 @@ border-radius:3px;
   background-color:black;
   align-items: center;
   color: white;
-  position: fixed;
-    z-index: 2;
+  position: relative;
+    z-index: 12;
     width: 100%;
 }
 .avtar{
