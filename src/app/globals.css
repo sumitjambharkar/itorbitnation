@@ -7,10 +7,9 @@
 html {
   height: 100%;
 }
-a{
+.box_pack_action button a {
   text-decoration: none;
-  color: white;
-  
+  color: #fff;
 }
 .chosebtn{
   cursor: pointer;
