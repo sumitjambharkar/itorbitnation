@@ -43,6 +43,24 @@ const Client = () => {
             <p>www.staraluminiums.com</p>
           </div>
         </a>
+        <a href="https://staraluminiums.com/">
+          <div className="client-card">
+            <img
+              src="https://res.cloudinary.com/dub7ltxoo/image/upload/v1715445801/SHI-LOGO_2_4_1_fd1sgy.png"
+              alt=""
+            />
+            <p>www.lightsandlife.in</p>
+          </div>
+        </a>
+        <a href="https://staraluminiums.com/">
+          <div className="client-card">
+            <img
+              src="https://res.cloudinary.com/dub7ltxoo/image/upload/v1715446487/SHI-LOGO_2_4_4_fsbat7.png"
+              alt=""
+            />
+            <p>www.frameboxx.in/centres/dadar-mumbai</p>
+          </div>
+        </a>
       </div>
     </div>
   );

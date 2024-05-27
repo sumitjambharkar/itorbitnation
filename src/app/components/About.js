@@ -12,12 +12,14 @@ const About = () => {
       <div className="about_box">
         <div className="box_pack">
             <h1>Digital Marketing Agency</h1>
+            <h2>itorbitnation</h2>
             <span>
             Our goal is to use technology to completely transform the way that businesses run. Our goal is to become our clients' preferred IT partner by providing them with scalable, dependable, and strategic solutions that enable them to accomplish their objectives.
             </span>
         </div>
         <div className="box_pack">
           <h1>Digital Marketing Institute</h1>
+          <h2>it-orbit-nation</h2>
          <span>Our mission is to provide top-notch IT education while acting as a catalyst for both professional and personal growth. Our goal is to develop a community of students who are capable of thriving in the quickly changing tech sector.</span>
         </div>
         <div className="box_pack_action">
@@ -32,12 +34,16 @@ const About = () => {
      <div className="box_pack_sp">
          <h1>Our Values</h1>
          <div>
+          <h3>It Orbit Nation, Digital Marketing Agency in Andheri,Mumbai,India.</h3>
          Our Core Values: Innovation: We welcome change and actively look for fresh approaches to problems.
          </div>
          <br></br>
-         <div>Collaboration: We believe in the power of collaboration working closely with our clients and partners to achieve shared success.</div>
+         <div>
+         
+         Collaboration: We believe in the power of collaboration working closely with our clients and partners to achieve shared success.</div>
          <br></br>
-         <div>Excellence: We consistently strive for excellence in everything we do, setting high standards for ourselves and our solutions.</div>
+         <div><h3>ITORBITNATION, Digital Marketing Company in Andheri,Mumbai,India.</h3>
+         Excellence: We consistently strive for excellence in everything we do, setting high standards for ourselves and our solutions.</div>
      </div>
      <div className="box_pack_action">
          <button><Link href='/contact'>Book Service</Link></button>
