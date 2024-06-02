@@ -8,63 +8,63 @@ const page = () => {
       paragraph: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713372351/New_Project_24_li3yha.png",
-      info: "fdfdf",
+      info: "Starting Cost: ₹10,000 to ₹30,000",
     },
     {
-      name: "App Development Services",
+      name: "Mobile App Development Services",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713372351/New_Project_25_wfkmlg.png",
-      info: "fdfdf",
+      info: "Starting Cost: ₹50,000 to ₹1,50,000",
     },
     {
       name: "Search Engine Optimization (SEO) Services",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713372350/New_Project_26_z7azyi.png",
-      info: "fdfdf",
+      info: "Starting Cost: ₹5,000 to ₹15,000",
     },
     {
       name: "Social Media Marketing (SMM) Services",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713372345/New_Project_27_roqlpx.png",
-      info: "fdfdf",
+      info: "Starting Cost: ₹10,000 to ₹20,000",
     },
     {
       name: "Pay-Per-Click (PPC) Marketing Services",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713372343/New_Project_28_lkpz4n.png",
-      info: "fdfdf",
+      info: "Starting Cost: ₹10,000 to ₹20,000",
     },
     {
-      name: "Content Marketing Services",
+      name: "Best Content Marketing Services",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713372344/New_Project_29_sv8nwv.png",
-      info: "fdfdf",
+      info: "Starting Cost: ₹15,000 to ₹30,000",
     },
     {
       name: "Email Marketing Services",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713372343/New_Project_30_cjq6ch.png",
-      info: "fdfdf",
+      info: "Starting Cost: ₹5,000 to ₹15,000",
     },
     {
       name: "Graphic Designing Services",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713372344/New_Project_31_bqudrl.png",
-      info: "fdfdf",
+      info: "Starting Cost: ₹3,000 to ₹10,000",
     },
     {
       name: "Video Editing Services",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713372343/New_Project_32_tfhhsb.png",
-      info: "fdfdf",
+      info: "Starting Cost:₹500 to ₹2,000 Per Video",
     },
   ];
   return (

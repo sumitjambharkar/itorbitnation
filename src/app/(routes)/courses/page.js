@@ -7,84 +7,96 @@ const page = () => {
       paragraph: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370625/New_Project_14_ct54pd.png",
-      info: "fdfdf",
+      info: "₹ 40,000.",
+      time:"Duration: 6 Months" 
     },
     {
       name: "Advanced Digital Marketing",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370625/New_Project_15_zxdma6.png",
-      info: "fdfdf",
+      info: "₹ 30,000.",
+      time:"Duration: 4 Months" 
     },
     {
       name: "Pro in Social Meadia Ads",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370625/New_Project_16_syh0bn.png",
-      info: "fdfdf",
+      info: "₹ 10,000.",
+      time:"Duration: 3 Months" 
     },
     {
       name: "Pro in Google Ads (PPC)",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370625/New_Project_17_pmkqeg.png",
-      info: "fdfdf",
+      info: "₹ 15,000.",
+      time:"Duration: 3 Months" 
     },
     {
-      name: "Search Engine Optimization (SEO) ",
+      name: "Search Engine Opti..(SEO) ",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370625/New_Project_18_eoqukq.png",
-      info: "fdfdf",
+      info: "₹ 15,000.",
+      time:"Duration: 3 Months" 
     },
     {
       name: "Full Stack Development",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370626/New_Project_12_yafhgv.png",
-      info: "fdfdf",
+      info: "₹ 70,000.",
+      time:"Duration: 8 - 12 Months" 
     },
     {
       name: "Website Development",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370626/New_Project_13_are3ww.png",
-      info: "fdfdf",
+      info: "₹ 40,000.",
+      time:"Duration: 6 - 8 Months" 
     },
     {
       name: "App Development",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370625/New_Project_19_hedipw.png",
-      info: "fdfdf",
+      info: "₹ 50,000.",
+      time:"Duration: 6 - 8 Months" 
     },
     {
       name: "Back-End Development",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370624/New_Project_20_sjhlfn.png",
-      info: "fdfdf",
+      info: "₹ 40,000.",
+      time:"Duration: 6 - 8 Months" 
     },
     {
       name: "Front-End Development",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370625/New_Project_21_ifp01c.png",
-      info: "fdfdf",
+      info: "₹ 20,000.",
+      time:"Duration: 6 Months" 
     },
     {
       name: "Graphic Designing",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370624/New_Project_22_wuju1d.png",
-      info: "fdfdf",
+      info: "₹ 15,000.",
+      time:"Duration: 3 - 4 Months" 
     },
     {
-      name: "Vedio Editing",
+      name: "Video Editing",
       p: "Professional website development services by freelance developers and website experts",
       image:
         "https://res.cloudinary.com/dub7ltxoo/image/upload/v1713370624/New_Project_23_j88865.png",
-      info: "fdfdf",
+      info: "₹ 30,000.",
+      time:"Duration: 3 - 6 Months" 
     },
   ];
   return (
@@ -106,6 +118,9 @@ const page = () => {
               <h1 className="blog-title">{doc.name}</h1>
               <p className="blog-description">
                {doc.info}
+              </p>
+              <p className="blog-description">
+               {doc.time}
               </p>
               <div className="blog-actions">
                 <div className="button-container">
